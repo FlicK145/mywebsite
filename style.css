@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #785589;
+}
+
+.nav ul {
+    list-style: none;
+    background-color: #7DE2D1;
+    text-align: center;
+    padding: 0;
+    margin: 0 4px;
+}
+
+.nav li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8 em;
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #888;
+    margin: 0 4px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #785589;
+    display: block;
+    transition: .3s background-color;
+}
+
+.nav a:hover {
+    background-color: #7DE2D1;
+    color: #FFCAE9;
+    cursor: default;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 100%;
+    margin: 0px;
+    visibility: hidden;
+}
+
+div:hover .desc {
+    visibility: visible
+}
+
+div.img img {
+    max-width: 100%;
+}
+
+div.img {
+    margin: 155px 5px 0px 0px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #f1f1f1;
+    line-height: 0px;
+    height: auto;
+    width: 20%;
+    float: left;
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -mos-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    border-radius: 4px;
+}
+
+div:hover {}
+
+div.img img {
+    display: inline-block;
+    margin: 3px;
+}
+
+@keyframes bgfade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bgfade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.2em;
+    }
+
+    /* Option 1 - Display Inline */
+    .nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+
+    /* Options 2 - Float
+    .nav li {
+        float: left:;
+    }
+    .nav ul {
+        overflow: auto;
+        width: 600px;
+        margin: 0 auto;
+    }
+    .nav {
+        background-color: #444;
+    }
+    */
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+
+#myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+.container { position:relative; }
+
+.container video {
+
+    position:relative;
+
+    z-index:0;
+
+}
+
+.overlay {
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    z-index:1;
+
+}
